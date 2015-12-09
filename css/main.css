@@ -1,0 +1,115 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    vertical-align: baseline;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: #f1f1f2;
+}
+
+header {
+    padding: 70px 0 0 30px;
+}
+
+.top_icon, .top_title {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.top_icon {
+    background: url('http://lingvolive.ru/assets/img/guideline_Icon_LL.png') no-repeat;
+    height: 60px;
+    width: 80px;
+}
+
+
+.top_title h1 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 200;
+    font-size: 52px;
+    color: #ff2d55;
+}
+
+.main {
+    padding: 30px 0 0 60px;
+    width: 860px;
+}
+
+.item {
+    background: #ffffff;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.item_inner {
+    padding: 20px 0 0 0;
+}
+
+.left_side, .content_holder {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.camera_holder {
+    background: url('http://lingvolive.ru/assets/img/icons%20cut_border.png') no-repeat;
+    width: 152px;
+    height: 127px;
+}
+
+.camera_icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background: url('http://lingvolive.ru/assets/img/icons%20cut_80%20px.png') no-repeat -320px 0;
+
+}
+
+.camera_text {
+    margin-top: -12px;
+    text-align: center;
+    color: grey;
+}
+
+.lang{
+    padding: 40px 0 0 0;
+    color: gray;
+    font-size: 14px;
+}
+.lang_id {
+    color: #308b3e;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.content_holder {
+    width: 100%;
+    padding-left: 30px;
+}
+
+.text_box, .avatar {
+    display: table-cell;
+}
+
+.text_box {
+    width: 75%;
+}
+
+.zametka_text {
+    width: 100%;
+}
+
+
+.avatar {
+    width: 25%;
+}
