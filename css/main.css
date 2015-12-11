@@ -196,6 +196,9 @@ header {
 .blue_btn:hover {
     background: blue;
 }
+.trnsp_btn:hover {
+    background: #dadada;
+}
 
 .trnsp_btn {
     border: 1px solid lightgray;
