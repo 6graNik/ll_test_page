@@ -139,7 +139,7 @@ header {
     width: 100%;
     border: none!important;
     outline: none!important;
-    min-height: 200px;
+    min-height: 150px;
     overflow: hidden;
     word-wrap: break-word;
     resize: none;
@@ -148,6 +148,7 @@ header {
 .text_real {
     font-family: 'Roboto Slab', serif;
     min-height: 200px;
+    padding-right: 10px;
 }
 
 .avatar_icon {
@@ -204,15 +205,17 @@ header {
 .perevod_block {
     width: 793px;
 }
-.perevod_block .zametka_text {
-    min-height: 0;
-}
+
 
 
 .lng_option_box {
     padding: 0 0 5px 0;
     border-bottom: 1px solid lightgray;
     width: 97%;
+}
+
+.lng_option_box .lang {
+    padding-top: 0;
 }
 
 .dir_changer, .drop_cursor {
@@ -232,4 +235,67 @@ header {
 }
 .dop_params {
     padding-top: 0;
+}
+
+.perevod_box {
+    display: block;
+    border: none;
+    padding: 20px 0 0 0;
+    //border-bottom: 1px solid lightgray;
+    width: 97%;
+}
+
+.perevod_box .zametka_text {
+    padding: 0;
+}
+
+.perevod_box .zametka_text::-webkit-input-placeholder {color: pink;}
+.perevod_box .zametka_text::-moz-placeholder          {color:pink;}
+.perevod_box .zametka_text:-moz-placeholder           {color:pink;}
+.perevod_box .zametka_text:-ms-input-placeholder      {color:pink;}
+
+.perevod_box  .skyblue::-webkit-input-placeholder {color: deepskyblue;}
+.perevod_box  .skyblue::-moz-placeholder          {color:deepskyblue;}
+.perevod_box  .skyblue:-moz-placeholder           {color:deepskyblue;}
+.perevod_box  .skyblue:-ms-input-placeholder      {color:deepskyblue;}
+
+.trnspblue {
+    min-height: 0;
+}
+
+.perevod_box  .trnspblue::-webkit-input-placeholder {color: #c0e3f2;}
+.perevod_box  .trnspblue::-moz-placeholder          {color:#c0e3f2;}
+.perevod_box  .trnspblue:-moz-placeholder           {color:#c0e3f2;}
+.perevod_box  .trnspblue:-ms-input-placeholder      {color:#c0e3f2;}
+
+.translate_text {
+    font-family: 'roboto';
+    font-size: 19px;
+    color: blue;
+    height: 2em;
+}
+
+.theme_option {
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.perevod_box .text_real {
+    min-height: 0;
+    padding-bottom: 20px;
+    font-size: 15px;
+}
+
+.perevod_box  .context {
+    font-family: 'Open Sans';
+    font-size: 15px;
+    color: black;
+}
+.context_title {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    color: deepskyblue;
+    padding-bottom: 10px;
 }
