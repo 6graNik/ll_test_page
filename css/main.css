@@ -93,11 +93,10 @@ header {
 }
 
 .lang{
-    padding: 40px 0 0 0;
+    padding: 40px 20px 0 0;
     color: gray;
     font-size: 14px;
     display: inline-block;
-    padding-right: 20px;
 }
 .lang_id {
     color: #308b3e;
@@ -125,7 +124,7 @@ header {
     border-right: 1px solid lightgray;
 }
 
-#one_pix_line {
+.one_pix_line {
     position: absolute;
     top: 0;
     left: 0;
@@ -145,8 +144,13 @@ header {
     resize: none;
 }
 
+.edit {
+    font-family: 'Roboto Slab', Times new Roman;
+    font-size: 15px;
+}
+
 .text_real {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', Times new Roman;
     min-height: 200px;
     padding-right: 10px;
 }
@@ -176,6 +180,10 @@ header {
     padding-top: 20px;
 }
 
+.perevod_inner .botton_line {
+    margin-left: 0;
+}
+
 .trnsp_btn, .blue_btn {
     background: none;
     text-transform: uppercase;
@@ -188,13 +196,17 @@ header {
 }
 
 .blue_btn {
-    border: 1px solid #b2d7ff;
-    background: #b2d7ff;
+    border: 1px solid blue;
+    background: blue;
     color: #ffffff;
 }
-
 .blue_btn:hover {
     background: blue;
+}
+
+.blue_btn[disabled="disabled"] {
+    background: #b2d7ff!important;
+    border: 1px solid #b2d7ff;
 }
 .trnsp_btn:hover {
     background: #dadada;
@@ -206,7 +218,7 @@ header {
 }
 
 .perevod_block {
-    width: 793px;
+    width: 533px;
 }
 
 
@@ -218,10 +230,16 @@ header {
 }
 
 .lng_option_box .lang {
-    padding-top: 0;
+    display: table-cell;
+    padding: 0 15px 0 0;
+}
+
+.lng_option_box .lang:nth-of-type(3) {
+    padding: 0;
 }
 
 .dir_changer, .drop_cursor {
+    cursor: pointer;
     display: inline-block;
     vertical-align: middle;
     height: 30px;
@@ -244,38 +262,43 @@ header {
     display: block;
     border: none;
     padding: 20px 0 0 0;
-    //border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     width: 97%;
 }
+
 
 .perevod_box .zametka_text {
     padding: 0;
 }
 
-.perevod_box .zametka_text::-webkit-input-placeholder {color: pink;}
-.perevod_box .zametka_text::-moz-placeholder          {color:pink;}
-.perevod_box .zametka_text:-moz-placeholder           {color:pink;}
-.perevod_box .zametka_text:-ms-input-placeholder      {color:pink;}
 
-.perevod_box  .skyblue::-webkit-input-placeholder {color: deepskyblue;}
-.perevod_box  .skyblue::-moz-placeholder          {color:deepskyblue;}
-.perevod_box  .skyblue:-moz-placeholder           {color:deepskyblue;}
-.perevod_box  .skyblue:-ms-input-placeholder      {color:deepskyblue;}
+
+.missed::-webkit-input-placeholder {color: pink;}
+.missed::-moz-placeholder {color: pink;}
+.missed:-moz-placeholder {color: pink;}
+.missed:-ms-input-placeholder {color: pink;}
+
+.left_aftr_focus::-webkit-input-placeholder {color: deepskyblue;}
+.left_aftr_focus::-moz-placeholder          {color:deepskyblue;}
+.left_aftr_focus:-moz-placeholder           {color:deepskyblue;}
+.left_aftr_focus:-ms-input-placeholder      {color:deepskyblue;}
 
 .trnspblue {
     min-height: 0;
 }
 
-.perevod_box  .trnspblue::-webkit-input-placeholder {color: #c0e3f2;}
-.perevod_box  .trnspblue::-moz-placeholder          {color:#c0e3f2;}
-.perevod_box  .trnspblue:-moz-placeholder           {color:#c0e3f2;}
-.perevod_box  .trnspblue:-ms-input-placeholder      {color:#c0e3f2;}
+.left_aftr_focus_pr::-webkit-input-placeholder {color: #c0e3f2;}
+.left_aftr_focus_pr::-moz-placeholder          {color:#c0e3f2;}
+.left_aftr_focus_pr:-moz-placeholder           {color:#c0e3f2;}
+.left_aftr_focus_pr:-ms-input-placeholder      {color:#c0e3f2;}
 
 .translate_text {
-    font-family: 'roboto';
+    font-family: 'Roboto Slab';
     font-size: 19px;
     color: blue;
     height: 2em;
+    padding-left: 0;
+    min-height: 1em;
 }
 
 .theme_option {
@@ -292,7 +315,6 @@ header {
 }
 
 .perevod_box  .context {
-    font-family: 'Open Sans';
     font-size: 15px;
     color: black;
 }
@@ -301,4 +323,106 @@ header {
     font-size: 16px;
     color: deepskyblue;
     padding-bottom: 10px;
+}
+
+.perevod_inner .perevod_box:nth-of-type(4) {
+    border: none;
+}
+
+.perevod_rel .perevod_box:nth-of-type(4) {
+    border: none;
+}
+
+.perevod_rel .zametka_text {
+    min-height: 100px;
+}
+
+.themes_choose {
+    display: block;
+    padding-left: 0;
+}
+
+.choosen_themes ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.choosen_themes ul li {
+    display: inline-block;
+}
+
+.choosen_themes span.decline_chs {
+    background: url('http://lingvolive.ru/assets/img/icons_general.png') no-repeat 0 -570px;
+    height: 20px;
+    width: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.search_box{
+    border: 1px solid lightgray;
+    margin-top: 20px;
+    padding: 0 5px 3px 0;
+}
+button.search_icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    /*background: none;*/
+    background: url('http://lingvolive.ru/assets/img/icons_general.png') no-repeat 0 -329px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.search_inpt_holder {
+    display: inline-block;
+    vertical-align: middle;
+}
+.search-input {
+    border: none!important;
+    outline: none!important;
+    font-size: 16px;
+}
+
+.theme_list_box {
+    width: 100%;
+    margin-top: 30px;
+    display: table;
+}
+
+.theme_column {
+    width: 133px;
+    padding-right: 15px;
+    display: table-cell;
+}
+.theme_list_box:nth-of-type(5) {
+    padding-right: 0;
+}
+
+.theme_column {
+    color: gray;
+}
+
+.rec_usd {
+    padding-bottom: 25px;
+}
+
+.theme_column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.theme_column ul li {
+    font-size: 12px;
+    padding-bottom: 5px;
+    color: gray;
+    cursor: pointer;
+}
+.theme_column ul li:nth-of-type(1) {
+    padding-top: 5px;
+}
+
+.theme_column ul li:hover {
+    color: blue;
 }
