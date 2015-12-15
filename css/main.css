@@ -144,6 +144,14 @@ header {
     resize: none;
 }
 
+/* в макете не пон€тно, где то шрифты опенсанс, где то роболо
+.zametka_text:focus {
+    font-family: 'Roboto Slab', Times new Roman;
+}
+*/
+
+
+
 .edit {
     font-family: 'Roboto Slab', Times new Roman;
     font-size: 15px;
@@ -207,6 +215,7 @@ header {
 .blue_btn[disabled="disabled"] {
     background: #b2d7ff!important;
     border: 1px solid #b2d7ff;
+    color: #ffffff!important;
 }
 .trnsp_btn:hover {
     background: #dadada;
@@ -264,6 +273,7 @@ header {
     padding: 20px 0 0 0;
     border-bottom: 1px solid lightgray;
     width: 97%;
+    position: relative;
 }
 
 
@@ -272,6 +282,7 @@ header {
 }
 
 
+/* смена цвета плейсхолдера во врем€€ покидани€ плей */
 
 .missed::-webkit-input-placeholder {color: pink;}
 .missed::-moz-placeholder {color: pink;}
@@ -282,6 +293,13 @@ header {
 .left_aftr_focus::-moz-placeholder          {color:deepskyblue;}
 .left_aftr_focus:-moz-placeholder           {color:deepskyblue;}
 .left_aftr_focus:-ms-input-placeholder      {color:deepskyblue;}
+
+.left_aftr_focus_cm::-webkit-input-placeholder {color: skyblue;}
+.left_aftr_focus_cm::-moz-placeholder          {color:skyblue;}
+.left_aftr_focus_cm:-moz-placeholder           {color:skyblue;}
+.left_aftr_focus_cm:-ms-input-placeholder      {color:skyblue;}
+
+
 
 .trnspblue {
     min-height: 0;
@@ -319,7 +337,6 @@ header {
     color: black;
 }
 .context_title {
-    font-family: 'Open Sans';
     font-size: 16px;
     color: deepskyblue;
     padding-bottom: 10px;
@@ -377,11 +394,14 @@ button.search_icon {
 .search_inpt_holder {
     display: inline-block;
     vertical-align: middle;
+    max-width: 690px;
+    width: 100%;
 }
 .search-input {
     border: none!important;
     outline: none!important;
     font-size: 16px;
+    width: 100%;
 }
 
 .theme_list_box {
@@ -426,3 +446,41 @@ button.search_icon {
 .theme_column ul li:hover {
     color: blue;
 }
+
+.second_step .small_user_icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: url('http://lingvolive.ru/assets/img/icons_general.png') no-repeat 0 -420px;
+}
+.second_step .perevod_box .small_user_icon {
+    top: 20px;
+}
+
+.second_step .translate_text {
+    padding-left: 40px;
+    min-height: 100px;
+}
+.second_step .lang:nth-of-type(1), .second_step .lang:nth-of-type(1) .dir_changer {
+    opacity: 0.5;
+    cursor: text;
+}
+
+.second_step .perevod_box:nth-of-type(2) .one_pix_line {
+    top: 20px;
+    left: 10px;
+}
+
+
+
+.second_step .perevod_box:nth-of-type(3) .zametka_text {
+    padding-left: 40px;
+}
+
+ .second_step .perevod_box:nth-of-type(2) .zametka_text, .second_step .perevod_box:nth-of-type(3) .zametka_text:nth-of-type(2), .second_step .perevod_box:nth-of-type(4) .zametka_text {
+    padding-left: 20px;
+}
+
+
