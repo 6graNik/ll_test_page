@@ -45,11 +45,14 @@ body {
     width: 860px;
 }
 
+.modal_box_main > * {
+    margin-bottom: 30px;
+}
+
 .modal_box_item {
     background: #ffffff;
     overflow: hidden;
-    padding: 30px;
-    margin-bottom: 30px;
+    padding: 30px 30px 20px 30px;
 }
 
 .modal_box_item > * {
@@ -67,7 +70,7 @@ body {
     vertical-align: top;
 }
 
-.left_side__camera_holder {
+.left_side__camera_box {
     background: url('http://lingvolive.ru/assets/img/icons%20cut_border.png') no-repeat;
     width: 152px;
     height: 127px;
@@ -82,7 +85,7 @@ body {
     width: 156px;
 }
 
-.camera_holder__camera_icon {
+.camera_box__camera_icon {
     width: 80px;
     height: 80px;
     margin: 0 auto;
@@ -90,17 +93,21 @@ body {
 
 }
 
-.camera_holder__camera_text {
+.camera_box__camera_text {
     margin-top: -12px;
     text-align: center;
     color: grey;
 }
 
-.lang{
+.lang_choose_holder {
     padding: 40px 20px 0 0;
+    display: inline-block;
+}
+
+
+.lang{
     color: gray;
     font-size: 14px;
-    display: inline-block;
 }
 .lang_id {
     color: #308b3e;
@@ -112,20 +119,25 @@ body {
     width: 100%;
     padding-left: 30px;
 }
-.content_buffer {
+.text_form__content_buffer{
     width: 100%;
     display: table;
 }
-
-.text_box, .avatar {
+.text_form__textarea_box-default {
+    width: 66%;
+    border-right: 1px solid lightgray;
     display: table-cell;
     vertical-align: top;
     position: relative;
 }
 
-.text_box {
-    width: 66%;
-    border-right: 1px solid lightgray;
+.text_form__person_avtr_holder {
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+    width: 190px;
+    padding: 0 10px 0 40px;
+    text-align: center;
 }
 
 .one_pix_line {
@@ -167,7 +179,7 @@ body {
     padding-right: 10px;
 }
 
-.avatar_icon {
+.person_avtr_box__icon {
     background: url('http://lingvolive.ru/pictures/208376.jpg?preset=100x100,m-scale-crop') no-repeat;
     height: 90px;
     width: 90px;
@@ -176,59 +188,78 @@ body {
 }
 
 
-.avatar {
-    width: 190px;
-    padding: 0 10px 0 40px;
-    text-align: center;
-}
 
-.avatar_text {
+
+.person_avtr_box_name {
     padding: 10px 0 0 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 140px;
 }
 
-.botton_line {
+.text_form__trnsp_blue_btn_holder{
     margin: 30px 0 0 182px;
     border-top: 1px solid lightgray;
     padding-top: 20px;
 }
 
-.perevod_inner .botton_line {
+.trnsp_blue_btn_box > *+* {
+    margin-right: 20px;
+}
+
+.perevod_inner {
     margin-left: 0;
 }
 
-.trnsp_btn, .blue_btn {
+.trnsp_btn  {
     background: none;
     text-transform: uppercase;
     font-size: 12px;
     float: right;
-    margin-left: 20px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    color: gray;
+}
+
+.trnsp_btn:hover {
+    background: #dadada;
+}
+
+.blue_btn {
+    background: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    float: right;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid blue;
+    background: blue;
+    color: #ffffff;
+}
+
+.blue_btn:hover {
+    background: blue;
+}
+
+.blue_btn-disabled {
+    background: #b2d7ff;
+    border: 1px solid #b2d7ff;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 12px;
+    float: right;
     padding: 5px 10px;
     border-radius: 3px;
     cursor: pointer;
 }
 
-.blue_btn {
-    border: 1px solid blue;
-    background: blue;
-    color: #ffffff;
-}
-.blue_btn:hover {
-    background: blue;
-}
 
-.blue_btn[disabled="disabled"] {
-    background: #b2d7ff!important;
-    border: 1px solid #b2d7ff;
-    color: #ffffff!important;
-}
-.trnsp_btn:hover {
-    background: #dadada;
-}
 
-.trnsp_btn {
-    border: 1px solid lightgray;
-    color: gray;
-}
+
+
 
 .perevod_block {
     width: 533px;
