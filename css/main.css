@@ -19,51 +19,55 @@ body {
     background: #f1f1f2;
 }
 
-header {
+.page_header {
     padding: 70px 0 0 30px;
 }
 
-.top_icon, .top_title {
+.page_header__top_icon {
     display: inline-block;
     padding-right: 20px;
 }
 
-.top_icon {
-    background: url('http://lingvolive.ru/assets/img/guideline_Icon_LL.png') no-repeat;
-    height: 60px;
-    width: 80px;
+.page_header__top_title {
+    display: inline-block;
 }
 
 
-.top_title h1 {
+.h1 {
     font-family: 'Roboto Slab', serif;
     font-weight: 200;
     font-size: 52px;
     color: #ff2d55;
 }
 
-.main {
+.modal_box_main {
     padding: 30px 0 0 60px;
     width: 860px;
 }
 
-.item {
+.modal_box_item {
     background: #ffffff;
     overflow: hidden;
     padding: 30px;
     margin-bottom: 30px;
 }
 
-.item_inner {
+.modal_box_item > * {
     padding: 20px 0 0 0;
 }
 
-.left_side, .content_holder {
+.text_form__left_side {
     display: table-cell;
     vertical-align: top;
 }
 
-.camera_holder {
+
+.text_form__content_holder {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.left_side__camera_holder {
     background: url('http://lingvolive.ru/assets/img/icons%20cut_border.png') no-repeat;
     width: 152px;
     height: 127px;
@@ -78,7 +82,7 @@ header {
     width: 156px;
 }
 
-.camera_icon {
+.camera_holder__camera_icon {
     width: 80px;
     height: 80px;
     margin: 0 auto;
@@ -86,7 +90,7 @@ header {
 
 }
 
-.camera_text {
+.camera_holder__camera_text {
     margin-top: -12px;
     text-align: center;
     color: grey;
@@ -104,7 +108,7 @@ header {
     font-size: 14px;
 }
 
-.content_holder {
+.text_form__content_holder {
     width: 100%;
     padding-left: 30px;
 }

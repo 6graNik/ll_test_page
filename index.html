@@ -9,29 +9,29 @@
 </head>
 <body>
     <div class="page_wrapper">
-        <header>
-            <div class="top_icon"></div>
-            <div class="top_title">
-                <h1>Добавление постов</h1>
+        <header class="page_header">
+            <img class="page_header__top_icon" src="http://lingvolive.ru/assets/img/guideline_Icon_LL.png">
+            <div class="page_header__top_title">
+                <h1 class="h1">Добавление постов</h1>
             </div>
         </header>
-        <section class="main">
+        <section class="modal_box_main">
 
-            <div class="item">
-                <form action="#">
-                    <div class="item_inner">
+            <section class="modal_box_item">
 
-                        <div class="left_side">
-                            <div class="camera_holder">
-                                <div class="camera_icon"></div>
-                                <div class="camera_text">Перетащите фото сюда</div>
-                            </div>
-                            <div class="lang">
-                                Язык: <span class="lang_id">RU</span><span class="drop_cursor"></span>
-                            </div>
+                <form class="modal_box_item__text_form" action="#">
+
+                    <div class="text_form__left_side">
+                        <div class="left_side__camera_holder">
+                            <div class="camera_holder__camera_icon"></div>
+                            <div class="camera_holder__camera_text">Перетащите фото сюда</div>
                         </div>
+                        <div class="lang">
+                            Язык: <span class="lang_id">RU</span><span class="drop_cursor"></span>
+                        </div>
+                    </div>
 
-                        <div class="content_holder">
+                    <div class="text_form__content_holder">
                             <div class="content_buffer">
                                 <div class="text_box">
                                     <textarea placeholder="напишите текст заметки"  class="zametka_text" maxlength="4000" required="required"></textarea>
@@ -46,15 +46,16 @@
                             </div>
                         </div>
 
-                        <div class="botton_line">
-                            <button class="blue_btn" type="submit" disabled="disabled">Опубликовать</button>
-                            <button class="trnsp_btn">Отмена</button>
-                        </div>
+                    <div class="botton_line">
+                        <button class="blue_btn" type="submit" disabled="disabled">Опубликовать</button>
+                        <button class="trnsp_btn">Отмена</button>
                     </div>
-                </form>
-            </div>
 
-            <div class="item">
+                </form>
+
+            </section>
+
+            <section class="modal_box_item">
                 <form action="#">
                     <div class="item_inner">
 
@@ -89,9 +90,9 @@
                         </div>
                     </div>
                 </form>
-            </div>
+            </section>
 
-            <div class="item">
+            <section class="modal_box_item">
                 <form action="#">
                     <div class="item_inner perevod_inner">
 
@@ -142,9 +143,9 @@
 
                     </div>
                 </form>
-            </div>
+            </section>
 
-            <div class="item">
+            <section class="modal_box_item">
                 <div class="item_inner perevod_rel">
 
                     <div class="content_holder">
@@ -199,9 +200,9 @@
                     </div>
 
                 </div>
-            </div>
+            </section>
 
-            <div class="item">
+            <section class="modal_box_item">
                 <div class="item_inner">
 
                     <div class="content_holder themes_choose">
@@ -326,9 +327,9 @@
                     </div>
 
                 </div>
-            </div>
+            </section>
 
-            <div class="item">
+            <section class="modal_box_item">
                 <form action="#">
                     <div class="item_inner perevod_inner second_step">
 
@@ -382,8 +383,7 @@
 
                     </div>
                 </form>
-            </div>
-
+            </section>
 
         </section>
     </div>
