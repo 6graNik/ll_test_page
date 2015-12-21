@@ -19,58 +19,51 @@ body {
     background: #f1f1f2;
 }
 
-.page_header {
+header {
     padding: 70px 0 0 30px;
 }
 
-.page_header__top_icon {
+.top_icon, .top_title {
     display: inline-block;
     padding-right: 20px;
 }
 
-.page_header__top_title {
-    display: inline-block;
+.top_icon {
+    background: url('http://lingvolive.ru/assets/img/guideline_Icon_LL.png') no-repeat;
+    height: 60px;
+    width: 80px;
 }
 
 
-.h1 {
+.top_title h1 {
     font-family: 'Roboto Slab', serif;
     font-weight: 200;
     font-size: 52px;
     color: #ff2d55;
 }
 
-.modal_box_main {
+.main {
     padding: 30px 0 0 60px;
     width: 860px;
 }
 
-.modal_box_main > * {
+.item {
+    background: #ffffff;
+    overflow: hidden;
+    padding: 30px;
     margin-bottom: 30px;
 }
 
-.modal_box_item {
-    background: #ffffff;
-    overflow: hidden;
-    padding: 30px 30px 20px 30px;
-}
-
-.modal_box_item > * {
+.item_inner {
     padding: 20px 0 0 0;
 }
 
-.text_form__left_side {
+.left_side, .content_holder {
     display: table-cell;
     vertical-align: top;
 }
 
-
-.text_form__content_holder {
-    display: table-cell;
-    vertical-align: top;
-}
-
-.left_side__camera_box {
+.camera_holder {
     background: url('http://lingvolive.ru/assets/img/icons%20cut_border.png') no-repeat;
     width: 152px;
     height: 127px;
@@ -85,7 +78,7 @@ body {
     width: 156px;
 }
 
-.camera_box__camera_icon {
+.camera_icon {
     width: 80px;
     height: 80px;
     margin: 0 auto;
@@ -93,21 +86,17 @@ body {
 
 }
 
-.camera_box__camera_text {
+.camera_text {
     margin-top: -12px;
     text-align: center;
     color: grey;
 }
 
-.lang_choose_holder {
-    padding: 40px 20px 0 0;
-    display: inline-block;
-}
-
-
 .lang{
+    padding: 40px 20px 0 0;
     color: gray;
     font-size: 14px;
+    display: inline-block;
 }
 .lang_id {
     color: #308b3e;
@@ -115,29 +104,24 @@ body {
     font-size: 14px;
 }
 
-.text_form__content_holder {
+.content_holder {
     width: 100%;
     padding-left: 30px;
 }
-.text_form__content_buffer{
+.content_buffer {
     width: 100%;
     display: table;
 }
-.text_form__textarea_box-default {
-    width: 66%;
-    border-right: 1px solid lightgray;
+
+.text_box, .avatar {
     display: table-cell;
     vertical-align: top;
     position: relative;
 }
 
-.text_form__person_avtr_holder {
-    display: table-cell;
-    vertical-align: top;
-    position: relative;
-    width: 190px;
-    padding: 0 10px 0 40px;
-    text-align: center;
+.text_box {
+    width: 66%;
+    border-right: 1px solid lightgray;
 }
 
 .one_pix_line {
@@ -160,14 +144,6 @@ body {
     resize: none;
 }
 
-/* в макете не пон€тно, где то шрифты опенсанс, где то роболо
-.zametka_text:focus {
-    font-family: 'Roboto Slab', Times new Roman;
-}
-*/
-
-
-
 .edit {
     font-family: 'Roboto Slab', Times new Roman;
     font-size: 15px;
@@ -179,7 +155,7 @@ body {
     padding-right: 10px;
 }
 
-.person_avtr_box__icon {
+.avatar_icon {
     background: url('http://lingvolive.ru/pictures/208376.jpg?preset=100x100,m-scale-crop') no-repeat;
     height: 90px;
     width: 90px;
@@ -188,78 +164,58 @@ body {
 }
 
 
-
-
-.person_avtr_box_name {
-    padding: 10px 0 0 0;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 140px;
+.avatar {
+    width: 190px;
+    padding: 0 10px 0 40px;
+    text-align: center;
 }
 
-.text_form__trnsp_blue_btn_holder{
+.avatar_text {
+    padding: 10px 0 0 0;
+}
+
+.botton_line {
     margin: 30px 0 0 182px;
     border-top: 1px solid lightgray;
     padding-top: 20px;
 }
 
-.trnsp_blue_btn_box > *+* {
-    margin-right: 20px;
-}
-
-.perevod_inner {
+.perevod_inner .botton_line {
     margin-left: 0;
 }
 
-.trnsp_btn  {
+.trnsp_btn, .blue_btn {
     background: none;
     text-transform: uppercase;
     font-size: 12px;
     float: right;
+    margin-left: 20px;
     padding: 5px 10px;
     border-radius: 3px;
     cursor: pointer;
-    border: 1px solid lightgray;
-    color: gray;
-}
-
-.trnsp_btn:hover {
-    background: #dadada;
 }
 
 .blue_btn {
-    background: none;
-    text-transform: uppercase;
-    font-size: 12px;
-    float: right;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
     border: 1px solid blue;
     background: blue;
     color: #ffffff;
 }
-
 .blue_btn:hover {
     background: blue;
 }
 
-.blue_btn-disabled {
-    background: #b2d7ff;
+.blue_btn[disabled="disabled"] {
+    background: #b2d7ff!important;
     border: 1px solid #b2d7ff;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-size: 12px;
-    float: right;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
+}
+.trnsp_btn:hover {
+    background: #dadada;
 }
 
-
-
-
-
+.trnsp_btn {
+    border: 1px solid lightgray;
+    color: gray;
+}
 
 .perevod_block {
     width: 533px;
@@ -308,7 +264,6 @@ body {
     padding: 20px 0 0 0;
     border-bottom: 1px solid lightgray;
     width: 97%;
-    position: relative;
 }
 
 
@@ -317,7 +272,6 @@ body {
 }
 
 
-/* смена цвета плейсхолдера во врем€€ покидани€ плей */
 
 .missed::-webkit-input-placeholder {color: pink;}
 .missed::-moz-placeholder {color: pink;}
@@ -328,13 +282,6 @@ body {
 .left_aftr_focus::-moz-placeholder          {color:deepskyblue;}
 .left_aftr_focus:-moz-placeholder           {color:deepskyblue;}
 .left_aftr_focus:-ms-input-placeholder      {color:deepskyblue;}
-
-.left_aftr_focus_cm::-webkit-input-placeholder {color: skyblue;}
-.left_aftr_focus_cm::-moz-placeholder          {color:skyblue;}
-.left_aftr_focus_cm:-moz-placeholder           {color:skyblue;}
-.left_aftr_focus_cm:-ms-input-placeholder      {color:skyblue;}
-
-
 
 .trnspblue {
     min-height: 0;
@@ -372,6 +319,7 @@ body {
     color: black;
 }
 .context_title {
+    font-family: 'Open Sans';
     font-size: 16px;
     color: deepskyblue;
     padding-bottom: 10px;
@@ -429,14 +377,11 @@ button.search_icon {
 .search_inpt_holder {
     display: inline-block;
     vertical-align: middle;
-    max-width: 690px;
-    width: 100%;
 }
 .search-input {
     border: none!important;
     outline: none!important;
     font-size: 16px;
-    width: 100%;
 }
 
 .theme_list_box {
@@ -481,41 +426,3 @@ button.search_icon {
 .theme_column ul li:hover {
     color: blue;
 }
-
-.second_step .small_user_icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    background: url('http://lingvolive.ru/assets/img/icons_general.png') no-repeat 0 -420px;
-}
-.second_step .perevod_box .small_user_icon {
-    top: 20px;
-}
-
-.second_step .translate_text {
-    padding-left: 40px;
-    min-height: 100px;
-}
-.second_step .lang:nth-of-type(1), .second_step .lang:nth-of-type(1) .dir_changer {
-    opacity: 0.5;
-    cursor: text;
-}
-
-.second_step .perevod_box:nth-of-type(2) .one_pix_line {
-    top: 20px;
-    left: 10px;
-}
-
-
-
-.second_step .perevod_box:nth-of-type(3) .zametka_text {
-    padding-left: 40px;
-}
-
- .second_step .perevod_box:nth-of-type(2) .zametka_text, .second_step .perevod_box:nth-of-type(3) .zametka_text:nth-of-type(2), .second_step .perevod_box:nth-of-type(4) .zametka_text {
-    padding-left: 20px;
-}
-
-
