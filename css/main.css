@@ -19,66 +19,97 @@ body {
     background: #f1f1f2;
 }
 
-header {
+.page_header {
     padding: 70px 0 0 30px;
 }
 
-.top_icon, .top_title {
-    display: inline-block;
+.page_header > img {
     padding-right: 20px;
 }
 
-.top_icon {
-    background: url('http://lingvolive.ru/assets/img/guideline_Icon_LL.png') no-repeat;
-    height: 60px;
-    width: 80px;
+.page_header__top_icon {
+    display: inline-block;
+}
+
+.page_header__top_title {
+    display: inline-block;
 }
 
 
-.top_title h1 {
+.h1 {
     font-family: 'Roboto Slab', serif;
     font-weight: 200;
     font-size: 52px;
     color: #ff2d55;
 }
 
-.main {
+.modal_box_main {
     padding: 30px 0 0 60px;
     width: 860px;
 }
 
-.item {
-    background: #ffffff;
-    overflow: hidden;
-    padding: 30px;
+.modal_box_main > * {
     margin-bottom: 30px;
 }
 
-.item_inner {
+.modal_box_item {
+    background: #ffffff;
+    overflow: hidden;
+    padding: 30px 30px 20px 30px;
+}
+
+.modal_box_item > * {
     padding: 20px 0 0 0;
 }
 
-.left_side, .content_holder {
+.text_form__left_side {
     display: table-cell;
     vertical-align: top;
 }
 
-.camera_holder {
+
+.text_form__content_holder {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.text_form_prd__content_holder {
+    display: table;
+    vertical-align: top;
+    width: 100%;
+}
+
+.text_form_prd__content_box {
+    display: table-cell;
+    vertical-align: top;
+    border-right: 1px solid lightgray;
+}
+
+.text_form_prd__content_box > .text_form_prd__textarea_holder {
+    padding: 20px 0 0 0;
+    border-top: 1px solid lightgray;
+    width: 97%;
+}
+
+
+.left_side__imgadd_box {
     background: url('http://lingvolive.ru/assets/img/icons%20cut_border.png') no-repeat;
     width: 152px;
     height: 127px;
 }
 
-.stock {
+.left_side__imgadd_box-added {
     background: none;
     width: 100%;
     height: auto;
 }
-.stock img {
+.left_side__imgadd_box-added img {
     width: 156px;
 }
 
-.camera_icon {
+.imgadd_box__imgadd_icon {
     width: 80px;
     height: 80px;
     margin: 0 auto;
@@ -86,42 +117,49 @@ header {
 
 }
 
-.camera_text {
+.imgadd_box__imgadd_text {
     margin-top: -12px;
     text-align: center;
     color: grey;
 }
 
-.lang{
+.lang_choose_holder {
     padding: 40px 20px 0 0;
-    color: gray;
-    font-size: 14px;
     display: inline-block;
 }
-.lang_id {
+
+.lang_choose_holder-choosen {
+    padding: 20px 20px 0 0;
+    display: inline-block;
+}
+
+
+.current_lang_id {
     color: #308b3e;
     text-transform: uppercase;
     font-size: 14px;
 }
 
-.content_holder {
-    width: 100%;
-    padding-left: 30px;
-}
-.content_buffer {
+
+.text_form__content_buffer{
     width: 100%;
     display: table;
 }
-
-.text_box, .avatar {
+.text_form__textarea_box-default {
+    width: 66%;
+    border-right: 1px solid lightgray;
     display: table-cell;
     vertical-align: top;
     position: relative;
 }
 
-.text_box {
-    width: 66%;
-    border-right: 1px solid lightgray;
+.text_form__person_avtr_holder {
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+    width: 190px;
+    padding: 0 10px 0 40px;
+    text-align: center;
 }
 
 .one_pix_line {
@@ -133,7 +171,7 @@ header {
     background: grey;
 }
 
-.zametka_text {
+.text_form__textarea-default {
     padding:0 10px 0 10px;
     width: 100%;
     border: none!important;
@@ -144,10 +182,32 @@ header {
     resize: none;
 }
 
-.edit {
+.text_form__textarea-default-edit {
     font-family: 'Roboto Slab', Times new Roman;
     font-size: 15px;
 }
+
+
+.text_form_prd__textarea-default {
+    padding:0 10px 0 10px;
+    width: 100%;
+    border: none!important;
+    outline: none!important;
+    min-height: 150px;
+    overflow: hidden;
+    word-wrap: break-word;
+    resize: none;
+}
+
+
+
+/* в макете не пон€тно, где то шрифты опенсанс, где то роболо
+.zametka_text:focus {
+    font-family: 'Roboto Slab', Times new Roman;
+}
+*/
+
+
 
 .text_real {
     font-family: 'Roboto Slab', Times new Roman;
@@ -155,7 +215,7 @@ header {
     padding-right: 10px;
 }
 
-.avatar_icon {
+.person_avtr_box__icon {
     background: url('http://lingvolive.ru/pictures/208376.jpg?preset=100x100,m-scale-crop') no-repeat;
     height: 90px;
     width: 90px;
@@ -164,78 +224,107 @@ header {
 }
 
 
-.avatar {
-    width: 190px;
-    padding: 0 10px 0 40px;
-    text-align: center;
-}
 
-.avatar_text {
+
+.person_avtr_box_name {
     padding: 10px 0 0 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 140px;
 }
 
-.botton_line {
+.text_form__wht_blue_btn_holder{
     margin: 30px 0 0 182px;
     border-top: 1px solid lightgray;
     padding-top: 20px;
 }
 
-.perevod_inner .botton_line {
+.text_form_prd__wht_blue_btn_holder {
+    padding-top: 20px;
+    border-top: 1px solid lightgray;
+}
+
+
+.wht_blue_btn_box > *+* {
+    margin-right: 20px;
+}
+
+.perevod_inner {
     margin-left: 0;
 }
 
-.trnsp_btn, .blue_btn {
+.wht_btn  {
     background: none;
     text-transform: uppercase;
     font-size: 12px;
     float: right;
-    margin-left: 20px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    color: gray;
+}
+
+.wht_btn:hover {
+    background: #dadada;
+}
+
+.blue_btn {
+    background: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    float: right;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid blue;
+    background: blue;
+    color: #ffffff;
+}
+
+.blue_btn:hover {
+    background: blue;
+}
+
+.blue_btn-disabled {
+    background: #b2d7ff;
+    border: 1px solid #b2d7ff;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 12px;
+    float: right;
     padding: 5px 10px;
     border-radius: 3px;
     cursor: pointer;
 }
 
-.blue_btn {
-    border: 1px solid blue;
-    background: blue;
-    color: #ffffff;
-}
-.blue_btn:hover {
-    background: blue;
-}
-
-.blue_btn[disabled="disabled"] {
-    background: #b2d7ff!important;
-    border: 1px solid #b2d7ff;
-}
-.trnsp_btn:hover {
-    background: #dadada;
-}
-
-.trnsp_btn {
-    border: 1px solid lightgray;
-    color: gray;
-}
-
-.perevod_block {
-    width: 533px;
-}
 
 
-
-.lng_option_box {
+.options_choose_box {
     padding: 0 0 5px 0;
-    border-bottom: 1px solid lightgray;
-    width: 97%;
+    display: block;
+    width: 100%;
 }
 
-.lng_option_box .lang {
-    display: table-cell;
+
+.trnsl_choose_box{
+    display: inline-block;
     padding: 0 15px 0 0;
+    font-size: 14px;
+    width: 140px;
 }
 
-.lng_option_box .lang:nth-of-type(3) {
-    padding: 0;
+.chst_echy_box {
+    display: inline-block;
+    padding: 0 15px 0 0;
+    font-size: 14px;
+    width: 220px;
+}
+
+.themes_choose_box {
+    display: inline-block;
+    font-size: 14px;
+    width: 180px;
 }
 
 .dir_changer, .drop_cursor {
@@ -264,6 +353,7 @@ header {
     padding: 20px 0 0 0;
     border-bottom: 1px solid lightgray;
     width: 97%;
+    position: relative;
 }
 
 
@@ -272,16 +362,24 @@ header {
 }
 
 
+/* смена цвета плейсхолдера во врем€€ покидани€ плей */
 
-.missed::-webkit-input-placeholder {color: pink;}
-.missed::-moz-placeholder {color: pink;}
-.missed:-moz-placeholder {color: pink;}
-.missed:-ms-input-placeholder {color: pink;}
+.text_form_prd__textarea-missed::-webkit-input-placeholder {color: pink;}
+.text_form_prd__textarea-missed::-moz-placeholder {color: pink;}
+.text_form_prd__textarea-missed:-moz-placeholder {color: pink;}
+.text_form_prd__textarea-missed:-ms-input-placeholder {color: pink;}
 
-.left_aftr_focus::-webkit-input-placeholder {color: deepskyblue;}
-.left_aftr_focus::-moz-placeholder          {color:deepskyblue;}
-.left_aftr_focus:-moz-placeholder           {color:deepskyblue;}
-.left_aftr_focus:-ms-input-placeholder      {color:deepskyblue;}
+.text_form_prd__textarea-empty::-webkit-input-placeholder {color: deepskyblue;}
+.text_form_prd__textarea-empty::-moz-placeholder          {color:deepskyblue;}
+.text_form_prd__textarea-empty:-moz-placeholder           {color:deepskyblue;}
+.text_form_prd__textarea-empty:-ms-input-placeholder      {color:deepskyblue;}
+
+.text_form_prd__textarea-emptyer::-webkit-input-placeholder {color: skyblue;}
+.text_form_prd__textarea-emptyer::-moz-placeholder          {color:skyblue;}
+.text_form_prd__textarea-emptyer:-moz-placeholder           {color:skyblue;}
+.text_form_prd__textarea-emptyer:-ms-input-placeholder      {color:skyblue;}
+
+
 
 .trnspblue {
     min-height: 0;
@@ -319,7 +417,6 @@ header {
     color: black;
 }
 .context_title {
-    font-family: 'Open Sans';
     font-size: 16px;
     color: deepskyblue;
     padding-bottom: 10px;
@@ -377,11 +474,14 @@ button.search_icon {
 .search_inpt_holder {
     display: inline-block;
     vertical-align: middle;
+    max-width: 690px;
+    width: 100%;
 }
 .search-input {
     border: none!important;
     outline: none!important;
     font-size: 16px;
+    width: 100%;
 }
 
 .theme_list_box {
@@ -426,3 +526,41 @@ button.search_icon {
 .theme_column ul li:hover {
     color: blue;
 }
+
+.second_step .small_user_icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: url('http://lingvolive.ru/assets/img/icons_general.png') no-repeat 0 -420px;
+}
+.second_step .perevod_box .small_user_icon {
+    top: 20px;
+}
+
+.second_step .translate_text {
+    padding-left: 40px;
+    min-height: 100px;
+}
+.second_step .lang:nth-of-type(1), .second_step .lang:nth-of-type(1) .dir_changer {
+    opacity: 0.5;
+    cursor: text;
+}
+
+.second_step .perevod_box:nth-of-type(2) .one_pix_line {
+    top: 20px;
+    left: 10px;
+}
+
+
+
+.second_step .perevod_box:nth-of-type(3) .zametka_text {
+    padding-left: 40px;
+}
+
+ .second_step .perevod_box:nth-of-type(2) .zametka_text, .second_step .perevod_box:nth-of-type(3) .zametka_text:nth-of-type(2), .second_step .perevod_box:nth-of-type(4) .zametka_text {
+    padding-left: 20px;
+}
+
+
