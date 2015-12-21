@@ -22,13 +22,13 @@
                 <form class="modal_box_item__text_form" action="#">
 
                     <div class="text_form__left_side">
-                        <div class="left_side__camera_box">
-                            <div class="camera_box__camera_icon"></div>
-                            <div class="camera_box__camera_text">Перетащите фото сюда</div>
+                        <div class="left_side__imgadd_box">
+                            <div class="imgadd_box__imgadd_icon"></div>
+                            <div class="imgadd_box__imgadd_text">Перетащите фото сюда</div>
                         </div>
                         <div class="lang_choose_holder">
                             <div class="lang_choose_box">
-                                Язык: <span class="lang_id">RU</span><span class="drop_cursor"></span>
+                                Язык: <span class="current_lang_id">RU</span><span class="drop_cursor"></span>
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                     <div class="text_form__content_holder">
                             <div class="text_form__content_buffer">
                                 <div class="text_form__textarea_box-default">
-                                    <textarea placeholder=" напишите текст заметки"  class="zametka_text" maxlength="4000" required="required"></textarea>
+                                    <textarea placeholder=" напишите текст заметки"  class="text_form__textarea-default" maxlength="4000" required="required"></textarea>
                                 </div>
                                 <div class="text_form__person_avtr_holder">
                                     <div class="person_avtr_box">
@@ -49,10 +49,10 @@
                             </div>
                     </div>
 
-                    <div class="text_form__trnsp_blue_btn_holder">
-                        <div class="trnsp_blue_btn_box">
+                    <div class="text_form__wht_blue_btn_holder">
+                        <div class="wht_blue_btn_box">
                             <button class="blue_btn-disabled" type="submit" disabled="disabled">Опубликовать</button>
-                            <button class="trnsp_btn">Отмена</button>
+                            <button class="wht_btn">Отмена</button>
                         </div>
                     </div>
 
@@ -61,92 +61,101 @@
             </section>
 
             <section class="modal_box_item">
-                <form action="#">
-                    <div class="item_inner">
+                <form class="modal_box_item__text_form" action="#">
 
-                        <div class="left_side">
-                            <div class="camera_holder stock">
+
+                        <div class="text_form__left_side">
+                            <div class="left_side__imgadd_box-added">
                                 <img src="http://www.docflow.ru/images/docflowNew2015/catalog1.png">
                             </div>
-                            <div class="lang">
-                                Язык: <span class="lang_id">RU</span><span class="drop_cursor"></span>
+                            <div class="lang_choose_holder-choosen">
+                                <div class="lang_choose_box">
+                                    Язык: <span class="current_lang_id">RU</span><span class="drop_cursor"></span>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="content_holder">
-                            <div class="content_buffer">
-                                <div class="text_box">
-                                    <textarea placeholder="напишите текст заметки"  class="zametka_text edit" maxlength="4000" required="required">Приходящие в электронном виде обращения граждан, например, с портала госуслуг разбирают в ручном режиме сотрудники канцелярии. Если объем обращений достигает 1000 в день, такая работа, которую автоматизировать сейчас.
+
+                        <div class="text_form__content_holder">
+                            <div class="text_form__content_buffer">
+                                <div class="text_form__textarea_box-default">
+                                    <textarea placeholder="напишите текст заметки"  class="text_form__textarea-default text_form__textarea-default-edit" maxlength="4000" required="required">Приходящие в электронном виде обращения граждан, например, с портала госуслуг разбирают в ручном режиме сотрудники канцелярии. Если объем обращений достигает 1000 в день, такая работа, которую автоматизировать сейчас.
                                     </textarea>
 
                                 </div>
-                                <div class="avatar">
-                                    <div class="avatar_icon"></div>
-                                    <div class="avatar_text">
-                                        Tigran Kaginyan
+                                <div class="text_form__person_avtr_holder">
+                                    <div class="person_avtr_box">
+                                        <div class="person_avtr_box__icon"></div>
+                                        <div class="person_avtr_box_name">
+                                            Tigran Kaginyan
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="botton_line">
-                            <button class="blue_btn active">Опубликовать</button>
-                            <button class="trnsp_btn">Отмена</button>
+                    <div class="text_form__wht_blue_btn_holder">
+                        <div class="wht_blue_btn_box">
+                            <button class="blue_btn" type="submit" disabled="disabled">Опубликовать</button>
+                            <button class="wht_btn">Отмена</button>
                         </div>
                     </div>
+
                 </form>
             </section>
 
             <section class="modal_box_item">
-                <form action="#">
-                    <div class="item_inner perevod_inner">
+                <form class="modal_box_item__text_form_prd" action="#">
 
-                        <div class="content_holder">
-                            <div class="content_buffer">
-                                <div class="text_box perevod_block">
-                                    <textarea placeholder="введите текст источника"  class="zametka_text" maxlength="4000" required="required"></textarea>
-                                    <div class="lng_option_box">
-                                        <div class="lang">
-                                            Язык: <span class="lang_id"> RU</span>
+                        <div class="text_form_prd__content_holder">
+                                <div class="text_form_prd__content_box">
+                                    <textarea placeholder="введите текст источника"  class="text_form_prd__textarea-default" maxlength="4000" required="required"></textarea>
+                                    <div class="options_choose_box">
+                                        <fieldset class="trnsl_choose_box">
+                                            Язык: <span class="current_lang_id"> RU</span>
                                             <span class="dir_changer"></span>
-                                            <span class="lang_id"> EN</span>
-                                        </div>
-                                        <div class="lang dop_params">
-                                            Часть речи: <span class="lang_id params_chooser"> Не указанно</span><span class="drop_cursor"></span>
-                                        </div>
-                                        <div class="lang dop_params">
+                                            <span class="current_lang_id"> EN</span>
+                                        </fieldset>
+
+                                        <fieldset class="chst_echy_box">
+                                            Часть речи: <span class="current_lang_id params_chooser"> Не указанно</span><span class="drop_cursor"></span>
+                                        </fieldset>
+
+                                        <fieldset class="themes_choose_box">
                                             Выбрать тематику<span class="drop_cursor"></span>
-                                        </div>
-
+                                        </fieldset>
                                     </div>
 
-                                    <div class="text_box perevod_box">
-                                        <textarea placeholder="не забудьте добавить перевод"  class="zametka_text missed" maxlength="4000" required="required"></textarea>
+                                    <div class="text_form_prd__textarea_holder">
+                                        <textarea placeholder="не забудьте добавить перевод"  class="text_form_prd__textarea-default text_form_prd__textarea-missed" maxlength="4000" required="required"></textarea>
                                     </div>
 
-                                    <div class="text_box perevod_box">
-                                        <textarea placeholder="добавить пример"  class="zametka_text skyblue left_aftr_focus" maxlength="4000"></textarea>
+                                    <div class="text_form_prd__textarea_holder">
+                                        <textarea placeholder="добавить пример"  class="text_form_prd__textarea-default text_form_prd__textarea-empty" maxlength="4000"></textarea>
                                     </div>
-                                    <div class="text_box perevod_box">
-                                        <textarea placeholder="переведите пример"  class="zametka_text trnspblue left_aftr_focus_cm" maxlength="4000"></textarea>
+                                    <div class="text_form_prd__textarea_holder">
+                                        <textarea placeholder="переведите пример"  class="text_form_prd__textarea-default text_form_prd__textarea-emptyer" maxlength="4000"></textarea>
                                     </div>
 
                                     <div class="one_pix_line"></div>
                                 </div>
-                                <div class="avatar">
-                                    <div class="avatar_icon"></div>
-                                    <div class="avatar_text">
-                                        Tigran Kaginyan
+                                <div class="text_form__person_avtr_holder">
+                                    <div class="person_avtr_box">
+                                        <div class="person_avtr_box__icon"></div>
+                                        <div class="person_avtr_box_name">
+                                            Tigran Kaginyan
+                                        </div>
                                     </div>
                                 </div>
+                        </div>
+                        <div class="text_form_prd__wht_blue_btn_holder">
+                            <div class="wht_blue_btn_box">
+                                <button class="blue_btn-disabled" type="submit" disabled="disabled">Опубликовать</button>
+                                <button class="wht_btn">Отмена</button>
                             </div>
                         </div>
-                        <div class="botton_line">
-                            <button class="blue_btn" type="submit" disabled="disabled">Готово</button>
-                            <button class="trnsp_btn">Отмена</button>
-                        </div>
 
-                    </div>
+
                 </form>
             </section>
 
@@ -161,12 +170,12 @@
                                 </div>
                                 <div class="lng_option_box">
                                     <div class="lang">
-                                        Язык: <span class="lang_id"> RU</span>
+                                        Язык: <span class="current_lang_id"> RU</span>
                                         <a href="#" class="dir_changer"></a>
-                                        <span class="lang_id"> EN</span>
+                                        <span class="current_lang_id"> EN</span>
                                     </div>
                                     <div class="lang dop_params">
-                                        Часть речи: <span class="lang_id params_chooser"> Не указанно</span><span class="drop_cursor"></span>
+                                        Часть речи: <span class="current_lang_id params_chooser"> Не указанно</span><span class="drop_cursor"></span>
                                     </div>
                                     <div class="lang dop_params">
                                         Выбрать тематику<span  class="drop_cursor"></span>
@@ -344,12 +353,12 @@
                                     <textarea placeholder="введите текст источника"  class="zametka_text translate_text" maxlength="4000" required="required">However this story describes something important</textarea>
                                     <div class="lng_option_box">
                                         <div class="lang">
-                                            Язык: <span class="lang_id"> RU</span>
+                                            Язык: <span class="current_lang_id"> RU</span>
                                             <span class="dir_changer"></span>
-                                            <span class="lang_id"> EN</span>
+                                            <span class="current_lang_id"> EN</span>
                                         </div>
                                         <div class="lang dop_params">
-                                            Часть речи: <span class="lang_id params_chooser"> Не указанно</span><span class="drop_cursor"></span>
+                                            Часть речи: <span class="current_lang_id params_chooser"> Не указанно</span><span class="drop_cursor"></span>
                                         </div>
                                         <div class="lang dop_params">
                                             Выбрать тематику<span class="drop_cursor"></span>

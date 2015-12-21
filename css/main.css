@@ -23,9 +23,12 @@ body {
     padding: 70px 0 0 30px;
 }
 
+.page_header > img {
+    padding-right: 20px;
+}
+
 .page_header__top_icon {
     display: inline-block;
-    padding-right: 20px;
 }
 
 .page_header__top_title {
@@ -68,24 +71,45 @@ body {
 .text_form__content_holder {
     display: table-cell;
     vertical-align: top;
+    width: 100%;
+    padding-left: 30px;
 }
 
-.left_side__camera_box {
+.text_form_prd__content_holder {
+    display: table;
+    vertical-align: top;
+    width: 100%;
+}
+
+.text_form_prd__content_box {
+    display: table-cell;
+    vertical-align: top;
+    border-right: 1px solid lightgray;
+}
+
+.text_form_prd__content_box > .text_form_prd__textarea_holder {
+    padding: 20px 0 0 0;
+    border-top: 1px solid lightgray;
+    width: 97%;
+}
+
+
+.left_side__imgadd_box {
     background: url('http://lingvolive.ru/assets/img/icons%20cut_border.png') no-repeat;
     width: 152px;
     height: 127px;
 }
 
-.stock {
+.left_side__imgadd_box-added {
     background: none;
     width: 100%;
     height: auto;
 }
-.stock img {
+.left_side__imgadd_box-added img {
     width: 156px;
 }
 
-.camera_box__camera_icon {
+.imgadd_box__imgadd_icon {
     width: 80px;
     height: 80px;
     margin: 0 auto;
@@ -93,7 +117,7 @@ body {
 
 }
 
-.camera_box__camera_text {
+.imgadd_box__imgadd_text {
     margin-top: -12px;
     text-align: center;
     color: grey;
@@ -104,21 +128,19 @@ body {
     display: inline-block;
 }
 
-
-.lang{
-    color: gray;
-    font-size: 14px;
+.lang_choose_holder-choosen {
+    padding: 20px 20px 0 0;
+    display: inline-block;
 }
-.lang_id {
+
+
+.current_lang_id {
     color: #308b3e;
     text-transform: uppercase;
     font-size: 14px;
 }
 
-.text_form__content_holder {
-    width: 100%;
-    padding-left: 30px;
-}
+
 .text_form__content_buffer{
     width: 100%;
     display: table;
@@ -149,7 +171,7 @@ body {
     background: grey;
 }
 
-.zametka_text {
+.text_form__textarea-default {
     padding:0 10px 0 10px;
     width: 100%;
     border: none!important;
@@ -160,6 +182,25 @@ body {
     resize: none;
 }
 
+.text_form__textarea-default-edit {
+    font-family: 'Roboto Slab', Times new Roman;
+    font-size: 15px;
+}
+
+
+.text_form_prd__textarea-default {
+    padding:0 10px 0 10px;
+    width: 100%;
+    border: none!important;
+    outline: none!important;
+    min-height: 150px;
+    overflow: hidden;
+    word-wrap: break-word;
+    resize: none;
+}
+
+
+
 /* в макете не пон€тно, где то шрифты опенсанс, где то роболо
 .zametka_text:focus {
     font-family: 'Roboto Slab', Times new Roman;
@@ -167,11 +208,6 @@ body {
 */
 
 
-
-.edit {
-    font-family: 'Roboto Slab', Times new Roman;
-    font-size: 15px;
-}
 
 .text_real {
     font-family: 'Roboto Slab', Times new Roman;
@@ -197,13 +233,19 @@ body {
     max-width: 140px;
 }
 
-.text_form__trnsp_blue_btn_holder{
+.text_form__wht_blue_btn_holder{
     margin: 30px 0 0 182px;
     border-top: 1px solid lightgray;
     padding-top: 20px;
 }
 
-.trnsp_blue_btn_box > *+* {
+.text_form_prd__wht_blue_btn_holder {
+    padding-top: 20px;
+    border-top: 1px solid lightgray;
+}
+
+
+.wht_blue_btn_box > *+* {
     margin-right: 20px;
 }
 
@@ -211,7 +253,7 @@ body {
     margin-left: 0;
 }
 
-.trnsp_btn  {
+.wht_btn  {
     background: none;
     text-transform: uppercase;
     font-size: 12px;
@@ -223,7 +265,7 @@ body {
     color: gray;
 }
 
-.trnsp_btn:hover {
+.wht_btn:hover {
     background: #dadada;
 }
 
@@ -258,28 +300,31 @@ body {
 
 
 
-
-
-
-.perevod_block {
-    width: 533px;
-}
-
-
-
-.lng_option_box {
+.options_choose_box {
     padding: 0 0 5px 0;
-    border-bottom: 1px solid lightgray;
-    width: 97%;
+    display: block;
+    width: 100%;
 }
 
-.lng_option_box .lang {
-    display: table-cell;
+
+.trnsl_choose_box{
+    display: inline-block;
     padding: 0 15px 0 0;
+    font-size: 14px;
+    width: 140px;
 }
 
-.lng_option_box .lang:nth-of-type(3) {
-    padding: 0;
+.chst_echy_box {
+    display: inline-block;
+    padding: 0 15px 0 0;
+    font-size: 14px;
+    width: 220px;
+}
+
+.themes_choose_box {
+    display: inline-block;
+    font-size: 14px;
+    width: 180px;
 }
 
 .dir_changer, .drop_cursor {
@@ -319,20 +364,20 @@ body {
 
 /* смена цвета плейсхолдера во врем€€ покидани€ плей */
 
-.missed::-webkit-input-placeholder {color: pink;}
-.missed::-moz-placeholder {color: pink;}
-.missed:-moz-placeholder {color: pink;}
-.missed:-ms-input-placeholder {color: pink;}
+.text_form_prd__textarea-missed::-webkit-input-placeholder {color: pink;}
+.text_form_prd__textarea-missed::-moz-placeholder {color: pink;}
+.text_form_prd__textarea-missed:-moz-placeholder {color: pink;}
+.text_form_prd__textarea-missed:-ms-input-placeholder {color: pink;}
 
-.left_aftr_focus::-webkit-input-placeholder {color: deepskyblue;}
-.left_aftr_focus::-moz-placeholder          {color:deepskyblue;}
-.left_aftr_focus:-moz-placeholder           {color:deepskyblue;}
-.left_aftr_focus:-ms-input-placeholder      {color:deepskyblue;}
+.text_form_prd__textarea-empty::-webkit-input-placeholder {color: deepskyblue;}
+.text_form_prd__textarea-empty::-moz-placeholder          {color:deepskyblue;}
+.text_form_prd__textarea-empty:-moz-placeholder           {color:deepskyblue;}
+.text_form_prd__textarea-empty:-ms-input-placeholder      {color:deepskyblue;}
 
-.left_aftr_focus_cm::-webkit-input-placeholder {color: skyblue;}
-.left_aftr_focus_cm::-moz-placeholder          {color:skyblue;}
-.left_aftr_focus_cm:-moz-placeholder           {color:skyblue;}
-.left_aftr_focus_cm:-ms-input-placeholder      {color:skyblue;}
+.text_form_prd__textarea-emptyer::-webkit-input-placeholder {color: skyblue;}
+.text_form_prd__textarea-emptyer::-moz-placeholder          {color:skyblue;}
+.text_form_prd__textarea-emptyer:-moz-placeholder           {color:skyblue;}
+.text_form_prd__textarea-emptyer:-ms-input-placeholder      {color:skyblue;}
 
 
 
