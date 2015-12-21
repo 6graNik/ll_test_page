@@ -133,12 +133,80 @@ body {
     display: inline-block;
 }
 
+.lang_string_name {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+}
 
-.current_lang_id {
+.current_lang_title {
+    display: inline-block;
     color: #308b3e;
     text-transform: uppercase;
     font-size: 14px;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    position: relative;
+    cursor: pointer;
 }
+.current_lang_title:hover {
+    background: whitesmoke;
+}
+
+.current_lang_title_span {
+    font-size: inherit;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+}
+
+.current_lang_title__dd_menu {
+    position: absolute;
+    background: white;
+    z-index: 999;
+    left: 0;
+    top: 100%;
+    margin-top: 5px;
+    padding: 10px 0;
+    border: 1px solid #308b3e;
+    width: 200px;
+    display: none;
+}
+
+.current_lang_title__dd_menu li {
+    list-style: none;
+    padding: 3px 0;
+}
+
+.current_lang_title__dd_menu li:hover {
+    background: whitesmoke;
+}
+
+.dd_menu__lng_title, .dd_menu__lng_name {
+
+}
+
+.dd_menu__lng_title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    padding-left: 20px;
+    width: 40px;
+    text-align: right;
+}
+
+.dd_menu__lng_name {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    padding-left: 20px;
+    color: black;
+    text-align: left;
+    text-transform: none;
+}
+
+
 
 
 .text_form__content_buffer{
@@ -311,20 +379,24 @@ body {
     display: inline-block;
     padding: 0 15px 0 0;
     font-size: 14px;
-    width: 140px;
+    width: 155px;
 }
 
 .chst_echy_box {
     display: inline-block;
     padding: 0 15px 0 0;
     font-size: 14px;
-    width: 220px;
+    width: 215px;
+}
+
+.params_chooser {
+    font-size: 14px;
 }
 
 .themes_choose_box {
     display: inline-block;
     font-size: 14px;
-    width: 180px;
+    width: 158px;
 }
 
 .dir_changer, .drop_cursor {
