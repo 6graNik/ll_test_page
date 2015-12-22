@@ -28,19 +28,24 @@ ddLngBtn.on('click', function () {
     var clsstUl = $(this).find('.lng_btn_box__dd_menu'),
         form = $(this).closest('.text_form__left_side'),
         formHeight = form.height();
-    clsstUl.stop().slideToggle();
+
 
 
     form.toggleClass('forAdHight');
     $('.forAdHight').animate({
         height: formHeight + needHight
+    }, function () {
+        clsstUl.stop().slideToggle();
+
     });
 
     if (!$('.forAdHight').length) {
-
-        $('.text_form__left_side').animate({
-            height: 197
+        clsstUl.stop().slideToggle(function () {
+            $('.text_form__left_side').animate({
+                height: 197
+            });
         });
+
     }
 });
 
@@ -76,6 +81,7 @@ ddButtons.on('click', function () {
 ddLi.on('click', function () {
     var newTitle = $(this).find('.dd_menu__lng_title').text();
     $(this).parent().parent().find('span').first().text(newTitle);
+    ddUl.slideUp();
 });
 
 
@@ -85,7 +91,7 @@ dirChanger.on('click', function () {
         btnTwo= btns[1],
         textOfBtnFirst = $(btns[0]).text(),
         textOfBtnSec = $(btns[1]).text();
-    console.log(btns)
+
 
     $(btnOne).text(textOfBtnSec);
     $(btnTwo).text(textOfBtnFirst);
