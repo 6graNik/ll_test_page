@@ -87,7 +87,13 @@ body {
     border-right: 1px solid lightgray;
 }
 
-.text_form_prd__content_box > .text_form_prd__textarea_holder {
+.text_form_prd__textarea_holder {
+    width: 97%;
+    position: relative;
+}
+
+
+.text_form_prd__content_box > *+* {
     padding: 20px 0 0 0;
     border-top: 1px solid lightgray;
     width: 97%;
@@ -126,6 +132,36 @@ body {
 .lang_choose_holder {
     padding: 40px 20px 0 0;
     display: inline-block;
+}
+
+.lang_choose_box {
+    font-size: 14px;
+    position: relative;
+}
+
+.lang_choose_box__lng_btn_box {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: inherit;
+    cursor: pointer;
+    position: relative;
+}
+
+.lang_choose_box__lng_btn_box:hover {
+    background: whitesmoke;
+}
+
+.lng_btn_box__current_lang_title_span {
+    font-size: inherit;
+    display: inline-block;
+    vertical-align: middle;
+    /*height: 100%;
+    width: 100%;*/
+    padding: 4px;
+}
+
+.lng_btn_box__current_lang_title_span:hover {
+    background: whitesmoke;
 }
 
 .lang_choose_holder-choosen {
@@ -183,9 +219,6 @@ body {
     background: whitesmoke;
 }
 
-.dd_menu__lng_title, .dd_menu__lng_name {
-
-}
 
 .dd_menu__lng_title {
     display: inline-block;
@@ -267,6 +300,30 @@ body {
     resize: none;
 }
 
+.text_form_prd__textarea-edit-avtr {
+    font-family: 'Roboto Slab';
+    font-size: 19px;
+    color: blue;
+    height: 2em;
+    min-height: 1em;
+    padding-left: 40px;
+}
+
+.text_form_prd__textarea-default-avtr {
+    padding:0 10px 0 10px;
+    width: 100%;
+    border: none!important;
+    outline: none!important;
+    min-height: 150px;
+    overflow: hidden;
+    word-wrap: break-word;
+    resize: none;
+    padding-left: 40px;
+}
+
+.text_form_prd__textarea-context {
+    padding-left: 0;
+}
 
 
 /* в макете не понятно, где то шрифты опенсанс, где то роболо
@@ -377,14 +434,25 @@ body {
 
 .trnsl_choose_box{
     display: inline-block;
-    padding: 0 15px 0 0;
+    vertical-align: middle;
+    padding: 0 5px 0 0;
     font-size: 14px;
-    width: 155px;
+    width: 150px;
 }
+.trnsl_choose_box-disabled {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 5px 0 0;
+    font-size: 14px;
+    width: 150px;
+    opacity: 0.5;
+}
+
 
 .chst_echy_box {
     display: inline-block;
-    padding: 0 15px 0 0;
+    vertical-align: middle;
+    padding: 0 10px 0 0;
     font-size: 14px;
     width: 215px;
 }
@@ -395,11 +463,12 @@ body {
 
 .themes_choose_box {
     display: inline-block;
+    vertical-align: middle;
     font-size: 14px;
     width: 158px;
 }
 
-.dir_changer, .drop_cursor {
+.dir_changer {
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
@@ -408,9 +477,39 @@ body {
     background: url('http://lingvolive.ru/assets/img/icons_general.png') no-repeat 0 -630px;
 }
 
-.drop_cursor {
+.lng_btn_box__drop_cursor {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    height: 30px;
+    width: 30px;
     background: url('http://lingvolive.ru/assets/img/icons_general.png') no-repeat 0 -481px;
 }
+
+
+
+.lng_btn_box__dd_menu {
+    position: absolute;
+    background: white;
+    z-index: 999;
+    left: -40px;
+    top: 100%;
+    margin-top: 5px;
+    padding: 10px 0;
+    border: 1px solid #308b3e;
+    width: 200px;
+    display: none;
+}
+
+.lng_btn_box__dd_menu li {
+    list-style: none;
+    padding: 3px 0;
+}
+
+.lng_btn_box__dd_menu li:hover {
+    background: whitesmoke;
+}
+
 
 .params_chooser {
     text-transform: none;
@@ -462,13 +561,17 @@ body {
 .left_aftr_focus_pr:-moz-placeholder           {color:#c0e3f2;}
 .left_aftr_focus_pr:-ms-input-placeholder      {color:#c0e3f2;}
 
-.translate_text {
+.text_form_prd__textarea-edit {
     font-family: 'Roboto Slab';
     font-size: 19px;
     color: blue;
     height: 2em;
     padding-left: 0;
     min-height: 1em;
+}
+
+.text_form_prd__textarea-edittrnsl {
+    padding-left: 0;
 }
 
 .theme_option {
@@ -506,21 +609,20 @@ body {
     min-height: 100px;
 }
 
-.themes_choose {
-    display: block;
-    padding-left: 0;
+.themes_choose_modal_box {
+    padding-top: 0;
 }
 
-.choosen_themes ul {
+.choosen_themes__ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.choosen_themes ul li {
+.choosen_themes__ul li {
     display: inline-block;
 }
 
-.choosen_themes span.decline_chs {
+.themes_choose__choosen_themes span.decline_chs {
     background: url('http://lingvolive.ru/assets/img/icons_general.png') no-repeat 0 -570px;
     height: 20px;
     width: 30px;
@@ -529,21 +631,20 @@ body {
 }
 
 
-.search_box{
+.themes_choose__search_box {
     border: 1px solid lightgray;
     margin-top: 20px;
     padding: 0 5px 3px 0;
 }
-button.search_icon {
+.search_form__search_icon {
     display: inline-block;
     width: 30px;
     height: 30px;
     /*background: none;*/
     background: url('http://lingvolive.ru/assets/img/icons_general.png') no-repeat 0 -329px;
     vertical-align: middle;
-    cursor: pointer;
 }
-.search_inpt_holder {
+.search_form__search_inpt_holder {
     display: inline-block;
     vertical-align: middle;
     max-width: 690px;
@@ -599,7 +700,7 @@ button.search_icon {
     color: blue;
 }
 
-.second_step .small_user_icon {
+ .small_user_icon {
     position: absolute;
     top: 0;
     left: 0;
@@ -607,32 +708,16 @@ button.search_icon {
     height: 30px;
     background: url('http://lingvolive.ru/assets/img/icons_general.png') no-repeat 0 -420px;
 }
-.second_step .perevod_box .small_user_icon {
-    top: 20px;
-}
 
-.second_step .translate_text {
-    padding-left: 40px;
-    min-height: 100px;
-}
-.second_step .lang:nth-of-type(1), .second_step .lang:nth-of-type(1) .dir_changer {
-    opacity: 0.5;
-    cursor: text;
-}
+ .small_user_icon-edit {
+     position: absolute;
+     top: 20px;
+     left: 0;
+     width: 30px;
+     height: 30px;
+     background: url('http://lingvolive.ru/assets/img/icons_general.png') no-repeat 0 -420px;
+ }
 
-.second_step .perevod_box:nth-of-type(2) .one_pix_line {
-    top: 20px;
-    left: 10px;
-}
-
-
-
-.second_step .perevod_box:nth-of-type(3) .zametka_text {
-    padding-left: 40px;
-}
-
- .second_step .perevod_box:nth-of-type(2) .zametka_text, .second_step .perevod_box:nth-of-type(3) .zametka_text:nth-of-type(2), .second_step .perevod_box:nth-of-type(4) .zametka_text {
-    padding-left: 20px;
-}
-
-
+ .min-height-2em {
+     min-height: 2em;
+ }
